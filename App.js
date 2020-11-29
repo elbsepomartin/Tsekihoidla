@@ -10,6 +10,7 @@ import store from './src/store';
 /* Components */
 import HomeScreen from './src/Components/HomeScreen';
 import AddTransaction from './src/Components/AddTransaction';
+import Settings from './src/Components/Settings';
 
 
 const Stack = createStackNavigator();
@@ -24,7 +25,10 @@ function App() {
                     }} />
                     <Stack.Screen name="Add" component={AddTransaction} options={{
                         title: 'Lisa väljaminek',
-                    }}/>
+                    }} />
+                    <Stack.Screen name="Settings" component={Settings} options={{
+                        title: 'Sätted',
+                    }} />
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>

@@ -79,7 +79,7 @@ const HomeScreen = ({navigation}) => {
                                         padding: 10,
                                         borderWidth: 3,
                                         width: '90%',
-                                        height: '110%',
+                                        height: 75,
                                         borderColor: '#fff',
                                         backgroundColor: '#6CAE75',
                                         alignItems: 'center',
@@ -101,7 +101,7 @@ const HomeScreen = ({navigation}) => {
 
             </Animated.View>
 
-            <View style = {{flex: 1, marginTop: -300}}>
+            <View style = {{flex: 1, marginTop: -350}}>
                 {transactions.length > 0 ? (
                 <FlatList data={transactions} renderItem={({item}) => (
                     <Item title={item.title} price={item.price} id={item.id} />
@@ -111,6 +111,12 @@ const HomeScreen = ({navigation}) => {
                 ) : (
                 <Empty />
                 )}
+            </View>
+
+            <View style = {{position: 'absolute', right: 0, bottom: 0}}>
+                <Button style = {{backgroundColor: 'rgba(250,250,250,1)', transform: [{ rotate: '90deg'}]}} onPress = {() => {navigation.navigate('Settings')}}>
+                    <Text style = {{fontSize: 24, padding: 10}}>...</Text>
+                </Button>
             </View>
 
         </Container>
