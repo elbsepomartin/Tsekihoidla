@@ -1,15 +1,8 @@
-import React, {useState} from 'react';
-import {StyleSheet, Button, View, Text} from 'react-native';
-import {Container, Content, Form, Item, Input} from 'native-base';
-
-/* Redux */
-import {useSelector, useDispatch} from 'react-redux';
-import {deleteTransaction} from '../store/actions/transactionActions';
+import React from 'react';
+import {StyleSheet, View, Text} from 'react-native';
+import {Container, Content} from 'native-base';
 
 function Settings() {
-    const onSubmit = () => {
-        return alert("Väljaminekud kustutatud!");
-    }
 
     return (
         <Container>
